@@ -189,7 +189,7 @@ module Chewy
             ]}
             client.indices.delete index: indexes if indexes.present?
 
-            self.journal.apply(start_time, **import_options) if apply_journal
+            # self.journal.apply(start_time, **import_options) if apply_journal
             result
           else
             purge!
